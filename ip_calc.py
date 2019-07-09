@@ -1,7 +1,44 @@
 #IP_adress = input('введите IP-сети: ')
 #from sys import argv
 #IP_adress = argv[1:]
-
+'''
+while True:
+  try:
+    ip = input("Input IP adress: ")
+    ip = ip.split('.')
+    print(ip)
+    if len(ip) != 4:
+      print("Incorrect IPv4 address")
+      continue
+    elif int(ip[0]) < 0 or int(ip[1]) < 0 or int(ip[2]) < 0 or int(ip[3]) < 0:
+      print("unused")
+      print("Incorrect IPv4 address")
+      continue
+    elif int(ip[0]) > 255 or int(ip[1]) > 255 or int(ip[2]) > 255 or int(ip[3]) > 255:
+      print("unused")
+      print("Incorrect IPv4 address")
+      continue
+    elif 1 <= int(ip[0]) <= 127:
+      print("class A")
+      print("unicast")
+    elif 128 <= int(ip[0]) <= 191:
+      print("class B")
+      print("unicast")
+    elif 192 <= int(ip[0]) <= 223:
+      print("class C")
+      print("unicast")
+    elif 224 <= int(ip[0]) <= 239:
+      print("class D")
+      print("multicast")
+    elif int(ip[0]) == 255 and int(ip[1]) == 255 and int(ip[2]) == 255 and int(ip[3]) == 255:
+      print("local broadcast")
+    elif int(ip[0]) == 0 and int(ip[1]) == 0 and int(ip[2]) == 0 and int(ip[3]) == 0:
+      print("unassigned")
+  except ValueError:
+    print("digital plz!")
+  else:
+    break
+'''
 IP_adress = '192.168.100.10/24'
 IP_adress = IP_adress.split('/', -1)
 mask = IP_adress[1]
