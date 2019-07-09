@@ -2,6 +2,7 @@
 #from sys import argv
 #IP_adress = argv[1:]
 '''
+IP_adress
 while True:
   try:
     ip = input("Input IP adress: ")
